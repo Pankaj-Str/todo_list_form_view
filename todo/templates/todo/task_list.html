@@ -10,12 +10,12 @@
 		{% for task in tasks %}
 			<li class="list-group-item d-flex justify-content-between align-items-start">
 				<div class="ms-2 me-auto">
-					<div class="fw-bold">Subheading</div>
-					Content for list item
+					<div class="fw-bold">
+						<a href="{% url 'task' task.id %}" class="{% if task.completed%}completed{%endif%}">{{ task.title }}</a> 
+					</div>
+					
 				  </div>
-				  <span class="badge text-bg-primary rounded-pill">14</span>
 				
-				<a href="{% url 'task' task.id %}" class="{% if task.completed%}completed{%endif%}">{{ task.title }}</a> 
 				 <div  class="task-controls">
 				 	<a href="{%url 'task-delete' task.id %}"><i class="bi bi-trash"></i> </a>
 					<a href="{%url 'task-update' task.id %}"><i class="bi bi-pencil-square"></i></a>
