@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row justify-content-center mt-5">
+	<div class="col-sm-4">
+	<form method="post" class="card">
+		{% csrf_token %}
+		<h2>Delete Task</h2>
+		<p>Are you sure that you want to delete "{{task}}"?</p>
+		<p class="form-buttons">
+			<input type="submit" class="btn btn-primary" value="Delete">
+			<a href="{% url 'tasks'%}" class="btn btn-outline">Cancel</a>
+		</p>
+	</form>
+</div>
+</div>
+
+{%endblock content%}

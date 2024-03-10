@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+ <article class="card shadow-lg">
+	<header class="card-header">
+		<h2>{{ task.title }}</h2>
+		<span class="badge text-bg-warning rounded-pill {% if task.completed %}badge-completed{% else %}badge-pending{%endif%}">
+			{% if task.completed %} Completed {%else%} Pending {%endif%}
+		</span>
+	</header>
+	<div class="card-body">
+		<p class="card-text">{{task.description}}</p>
+	</div>
+	
+</article>
+
+{%endblock content%}
