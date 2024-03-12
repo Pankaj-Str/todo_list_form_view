@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login 
 from django.contrib.auth.models import User
 from .forms import RegisterForm
-
+from django.contrib.auth.views import LogoutView
 
 class RegisterView(FormView):
     template_name = 'users/register.html'

@@ -36,7 +36,10 @@
                     <li class="nav-item">       	<a  class="nav-link active" href="{% url 'task-create' %}"><i class="bi bi-plus-circle"></i> Create Task</a> </li>
                     
                       <li class="nav-item">     	<a  class="nav-link active" href="#">Hi {{request.user | title}}</a> </li>
-                          <li class="nav-item">         <a class="nav-link active" href="{% url 'logout' %}" class="btn btn-outline">Logout</a> </li>
+                          <li class="nav-item">       
+                            <a href="{% url 'logout' %}" class="btn btn-outline">Logout</a>
+
+                          </li>
                       {% else %}
                       <li class="nav-item">	<a class="nav-link active" href="{% url 'login' %}" class="btn btn-outline">Login</a> </li>
                       <li class="nav-item">        <a class="nav-link active" href="{% url 'register' %}" class="btn btn-primary">Join Now</a> </li>
